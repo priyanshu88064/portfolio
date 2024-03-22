@@ -8,6 +8,7 @@ function Nav({setSideClass}){
                 <img src={profile} alt=""/>
                 <div>Priyanshu</div>
             </div>
+            <div className="line"></div>
             <div className="navcollapse"><img src={collapse} alt="" onClick={()=>{setSideClass("show")}}/></div>
         </div>
     );

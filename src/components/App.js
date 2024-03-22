@@ -2,6 +2,8 @@ import { useState } from "react";
 import Home from "./Home";
 import Nav from "./Nav";
 import SideBar from "./SideBar";
+import Skills from "./Skills";
+import Projects from "./Projects";
 
 function App(){
 
@@ -12,9 +14,10 @@ function App(){
       <SideBar sideClass={sideClass} setSideClass={setSideClass}/>
       <Nav setSideClass={setSideClass}/>
       <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
+      <Skills/>
+      <Projects/>
+      {/* <Home/>
+      <Home/> */}
     </div>
   );
 }
