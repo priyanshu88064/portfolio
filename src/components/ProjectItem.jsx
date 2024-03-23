@@ -1,8 +1,14 @@
-import React from "react";
+import code from "../assets/code.png";
 
-const ProjectItem = React.forwardRef(({item},ref)=>{
+function ProjectItem({item}){
     return (
-        <div className="sitem" ref={ref}>
+        <div className="sitem"
+            style={{
+                background:`url(${code})`,
+                backgroundSize:'cover'
+            }}>
+            <div className="op"></div>
+            <div className="sipop"></div>
             <div className="sip">
                 <div className="sipa">{item.title}</div>
                 <div className="sipd">a description of your proect goes here.</div>
@@ -13,6 +19,5 @@ const ProjectItem = React.forwardRef(({item},ref)=>{
             </div>
         </div>
     );
-});
-
+}
 export default ProjectItem;

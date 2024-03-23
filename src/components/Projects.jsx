@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import star from "../assets/star.svg";
 import ProjectItem from "./ProjectItem";
+import {Swiper,SwiperSlide} from "swiper/react";
+import "swiper/css";
 
 function Projects(){
-    
-    const childRef = useRef([]);
 
     const projectsData = [
         {
@@ -21,10 +21,6 @@ function Projects(){
         }
     ];
 
-    const handleScroll = (e)=>{
-       console.log(e);
-    }
-
     return (
         <div className="projects">
             <div className="phead">
@@ -32,18 +28,19 @@ function Projects(){
                 <div>Featured Projects</div>
             </div>
             <div className="c2">A curated selection of my most interesting projects.</div>
-            <div className="sbox">
-                {
-                    projectsData.map((item,index)=>(
-                        <ProjectItem key={item.id} item={item} ref={el=>childRef.current[index]=el}/>
-                    ))
-                }
-            </div>
-            <div className="pdot">
-                <input onChange={handleScroll} type="radio" name="slider" id="s1" checked="checked"/>
-                <input onChange={handleScroll} type="radio" name="slider" id="s2"/>
-                <input onChange={handleScroll} type="radio" name="slider" id="s3"/>
-            </div>
+            <Swiper
+                spaceBetween={40}
+                slidesPerView={1.3}
+                className="swiper"
+                centeredSlides='true'
+                onSlideChange={()=>{console.log("slide changed")}}
+                onSwiper={e=>console.log(e)}
+
+            >
+                <SwiperSlide className="switemf"><ProjectItem item={projectsData[0]}/></SwiperSlide>
+                <SwiperSlide><ProjectItem item={projectsData[1]}/></SwiperSlide>
+                <SwiperSlide className="switeml"><ProjectItem item={projectsData[2]}/></SwiperSlide>
+            </Swiper>
         </div>
     );
 }
