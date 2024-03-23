@@ -22,7 +22,7 @@ function Skills(){
 
     return (
         <div className="skills">
-            <div className="sh">My Skills<div>I'm most familiar with this stack:</div></div>
+            <div className="sh">The techstack<div>I'm most familiar with this stack:</div></div>
             <div className="sgrid">
                {
                     skills && skills.map((item,index)=>(
