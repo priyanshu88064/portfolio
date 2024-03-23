@@ -1,10 +1,8 @@
-import code from "../assets/code.png";
-
 function ProjectItem({item}){
     return (
         <div className="sitem"
             style={{
-                background:`url(${code})`,
+                background:`url(${item.image})`,
                 backgroundSize:'cover'
             }}>
             <div className="op"></div>
