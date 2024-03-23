@@ -84,7 +84,7 @@ code {
   left: 0;
   width: 100%;
   color: white;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 63%);
   backdrop-filter:blur(3px);
   padding-top: 5px;
   padding-bottom: 5px;
@@ -100,7 +100,7 @@ code {
     border-radius: 50%;
   }
   div{
-    color: rgb(203, 203, 203);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 700;
     margin-left: 10px;
@@ -333,4 +333,10 @@ code {
 }
 .swiper{
   margin-top: 40px;
+}
+.appop{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 200ms;
 }
