@@ -14,7 +14,7 @@ function App(){
 
   return (
     <div className="app">
-      {/* <div className="appop" style={{background:sideClass==="show"?"rgba(0, 0, 0, 0.5)":"transparent"}}></div> */}
+      <div className="appop" style={{background:sideClass==="show"?"rgba(0, 0, 0, 0.5)":"transparent"}}></div>
       <SideBar sideClass={sideClass} setSideClass={setSideClass}/>
       <Nav setSideClass={setSideClass}/>
       <Home/>
