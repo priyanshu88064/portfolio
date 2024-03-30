@@ -88,7 +88,7 @@ code {
   backdrop-filter:blur(3px);
   padding-top: 5px;
   padding-bottom: 5px;
-  z-index: 1;
+  z-index: 2;
 }
 .navimg{
   display: flex;
@@ -119,7 +119,7 @@ code {
 .sidebar{
   background-color:rgb(11, 43, 63);
   position:fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   width: 0;
@@ -185,16 +185,25 @@ code {
   background-color: black;
   color: white;
 }
-.sh{
-  text-align: center;
+.smh{
+  margin-top: 10px;
+  font-size: 14px;
+  color: gray;
+  font-weight: normal;
+}
+.ssh{
   font-size: 25px;
   font-weight: 700;
-  div{
-    margin-top: 10px;
-    font-size: 14px;
-    color: gray;
-    font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 50px;
+    margin-right: 10px;
   }
+}
+.sh{
+  text-align: center;
 }
 .sgrid{
   display: flex;
@@ -264,6 +273,7 @@ code {
   margin-top: 10px;
   border-radius: 10px;
   background-size: cover;
+  z-index: -1;
   
   @media screen and (min-width:900px){
     height: 700px;
@@ -339,4 +349,91 @@ code {
   height: 100%;
   position: absolute;
   transition: all 200ms;
+}
+
+/* swiperjs pagination */
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  height: 15px;
+  width: 15px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 15px
+}
+
+.exp{
+  background-color: black;
+  color: white;
+}
+.exphead{
+  img{
+    width: 50px;
+    margin-right: 15px;
+  }
+  padding-top: 50px;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expitem{
+  width: min(1000px,90%);
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+.eih{
+  color: rgb(48, 159, 255);
+}
+.eimeta{
+  font-size: 13px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  div:first-child{
+    border-right: 1px solid white;
+    padding-right: 20px;
+  }
+}
+.eib{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 90%;
+  margin-inline: auto;
+  background:linear-gradient(87deg, rgba(255,255,255,1) 31%, rgba(0,0,0,1) 100%);
+  height: 1px;
+}
+.eidesc{
+  text-align: left;
+  color: rgb(182, 182, 182);
+  column-gap: 100px;
+  font-size: 15px;
+  ul>li{
+    margin-bottom: 10px;
+  }
 }

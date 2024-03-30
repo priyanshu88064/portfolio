@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import SideBar from "./SideBar";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Experience from "./Experience";
 
 function App(){
 
@@ -17,6 +18,7 @@ function App(){
       <Home/>
       <Skills/>
       <Projects/>
+      <Experience/>
       {/* <Home/>
       <Home/> */}
     </div>

@@ -6,6 +6,7 @@ import express from "../assets/express.svg";
 import mongo from "../assets/mongo.svg";
 import version from "../assets/version.svg";
 import docker from "../assets/docker.svg";
+import skillsimg from "../assets/skills.svg";
 
 function Skills(){
 
@@ -22,7 +23,7 @@ function Skills(){
 
     return (
         <div className="skills">
-            <div className="sh">The techstack<div>I'm most familiar with this stack:</div></div>
+            <div className="sh"><div className="ssh"><img src={skillsimg} alt=""/>The techstack</div><div className="smh">I'm most familiar with this stack:</div></div>
             <div className="sgrid">
                {
                     skills && skills.map((item,index)=>(

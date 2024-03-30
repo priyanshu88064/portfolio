@@ -1,9 +1,12 @@
 import star from "../assets/star.svg";
 import ProjectItem from "./ProjectItem";
 import {Swiper,SwiperSlide} from "swiper/react";
+import {Pagination} from "swiper/modules";
 import code from "../assets/code.png";
 import stream from "../assets/stream.png";
 import "swiper/css";
+// import "swiper/swiper-bundle.css";
+
 
 
 function Projects(){
@@ -42,8 +45,10 @@ function Projects(){
                 className="swiper"
                 centeredSlides='true'
                 autoplay={true}
-                onSlideChange={()=>{console.log("slide changed")}}
-                onSwiper={e=>console.log(e)}
+                modules={[Pagination]}
+                pagination={{
+                    clickable:true
+                }}
 
             >
                 <SwiperSlide className="swi switemf"><ProjectItem item={projectsData[0]}/></SwiperSlide>
