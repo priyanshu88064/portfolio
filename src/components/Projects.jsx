@@ -5,7 +5,6 @@ import {Pagination} from "swiper/modules";
 import code from "../assets/code.png";
 import stream from "../assets/stream.png";
 import "swiper/css";
-// import "swiper/swiper-bundle.css";
 
 
 
@@ -33,7 +32,7 @@ function Projects(){
     ];
 
     return (
-        <div className="projects">
+        <div id="projects" className="projects">
             <div className="phead">
                 <img src={star} alt=""/>
                 <div>Featured Projects</div>

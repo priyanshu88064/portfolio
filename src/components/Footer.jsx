@@ -1,6 +1,8 @@
 import linkedin from "../assets/linkedin.svg";
 import git from "../assets/git.svg";
 
+const resume = "https://portfolio-psi-five-80.vercel.app/resume.pdf";
+
 function Footer(){
     return (
         <div className="footer">
@@ -10,9 +12,9 @@ function Footer(){
                 <div className="flinks">
                     <div>Links</div>
                     <div className="flc">
-                        <div className="flitem">About Me</div>
-                        <div className="flitem">Download CV</div>
-                        <div className="flitem">Projects</div>
+                        <div className="flitem sp"><a href="#home">About Me</a></div>
+                        <div className="flitem sp"><a href={resume} target="blank">Download CV</a></div>
+                        <div className="flitem sp"><a href="#projects">Projects</a></div>
                     </div>
                 </div>
                 <div className="fsocial">

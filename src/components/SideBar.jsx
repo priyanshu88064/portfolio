@@ -2,6 +2,8 @@ import cross from "../assets/cross.svg";
 import linkedin from "../assets/linkedin.svg";
 import git from "../assets/git.svg";
 
+const resume = "https://portfolio-psi-five-80.vercel.app/resume.pdf";
+
 function SideBar({sideClass,setSideClass}){
 
     const handleCollapse = ()=>{
@@ -11,8 +13,8 @@ function SideBar({sideClass,setSideClass}){
     return (
         <div className={`sidebar ${sideClass}`}>
             <div className="shead"><img src={cross} alt="" onClick={handleCollapse}/></div>
-            <div>SHOWCASE</div>
-            <div>DOWNLOAD CV</div>
+            <div className="sp"><a href="#projects">SHOWCASE</a></div>
+            <div className="sp"><a href={resume} target="blank">DOWNLOAD CV</a></div>
             <div>
                 <img src={linkedin} alt=""/>
                 <img src={git} alt=""/>
